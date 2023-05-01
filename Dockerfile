@@ -4,9 +4,9 @@ LABEL MAINTAINER="Mikalai Lukyanchyk"
 LABEL description="A Docker container to serve a simple Python web server"
 
 RUN apt-get update \
-    && apt-get upgrade \
-    && useradd -m phpuser
+    && apt-get upgrade
 
+RUN useradd -m phpuser
 WORKDIR /home/phpuser/webserver
 COPY ./pages/* ./pages/
 COPY main.py ./
