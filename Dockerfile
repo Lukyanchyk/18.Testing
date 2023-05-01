@@ -1,6 +1,5 @@
 FROM python:3.11-slim
 
-
 LABEL MAINTAINER="Mikalai Lukyanchyk"
 LABEL description="A Docker container to serve a simple Python web server"
 
