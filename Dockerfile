@@ -12,7 +12,7 @@ WORKDIR /home/phpuser/webserver
 COPY ./pages/* ./pages/
 COPY main.py ./
 
-EXPOSE 8080
+EXPOSE 8081
 USER phpuser
 
 ENTRYPOINT ["python", "main.py"] 
