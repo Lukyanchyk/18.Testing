@@ -1,11 +1,9 @@
 name: CI. Testing Dockerimage
 
 on:
-  release:
-    types: [published]
   push:
     tags:
-      - "v*.*"
+      - "v*"
 #    branches:
 #      - 'main'
 
