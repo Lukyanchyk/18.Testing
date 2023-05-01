@@ -29,7 +29,7 @@ jobs:
       - name: Build Dokerimage
         run: |
           docker build -f Dockerfile . --network=host -t ${{ env.IMAGE_NAME }}:${{  github.ref_name }}
-          docker run -d --rm -p 80:8001 --name ${{ env.IMAGE_NAME }} ${{ env.IMAGE_NAME }}:${{  github.ref_name }}
+          docker run -d --rm -p 80:8000 --name ${{ env.IMAGE_NAME }} ${{ env.IMAGE_NAME }}:${{  github.ref_name }}
           echo "Docker list running containers:" >> ${{ env.RESULT_FILE }}
           docker ps >> ${{ env.RESULT_FILE }}
           sleep ${{ env.WAITING_TIMER }}
